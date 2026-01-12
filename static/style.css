@@ -1,0 +1,109 @@
+body {
+    background-color: #1b3a2b; /* фон страницы */
+    color: #fff; /* основной текст белый */
+
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center; /* центрирует текст */
+    margin-bottom: 20px; /* отступ от блока чата */
+    font-size: 40px; /* чуть больше стандартного размера */
+}
+
+.chat-container {
+    width: 400px;
+    margin: 50px auto; /* центрируем */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.messages {
+    background-color: #2e6b3f; /* светлее фон блока сообщений */
+    height: 300px;
+    padding: 10px;
+    overflow-y: auto; /* прокрутка */
+    border-radius: 5px;
+}
+
+#messageInput, #username {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3f8b52; /* чуть светлее блока сообщений */
+    color: #fff;
+}
+
+#username {
+    margin-bottom: 15px;
+}
+
+#sendBtn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #0f5e25; /* темно-зелёный */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: #1e3d29; /* светло-серый/почти белый */
+    opacity: 1; /* чтобы цвет был ярким */
+}
+
+#chatForm {
+    display: flex;
+    gap: 10px; /* расстояние между полем и кнопкой */
+}
+
+#messageInput {
+    flex: 1; /* занимает всё оставшееся место */
+}
+
+#sendBtn {
+    flex: 0; /* не растягивается */
+}
+
+.message {
+    background-color: #4fa868; /* чуть светлее блока сообщений */
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left; /* текст по центру */
+    position: relative; /* для позиционирования времени */
+}
+
+/* Имя пользователя сверху */
+.message .username {
+    display: block;
+    font-weight: bold;
+    color: #1e3d29; /* темно-зеленый */
+    margin-bottom: 5px;
+}
+
+/* Текст сообщения */
+.message .text {
+    display: block;
+    color: #fff; /* белый текст */
+    font-size: 16px;
+
+        /* главное для переноса текста */
+    word-wrap: break-word;   /* старый вариант, но работает везде */
+    overflow-wrap: break-word; /* современный стандарт */
+    white-space: normal;     /* перенос по словам, не в одну строку */
+
+}
+
+/* Время снизу */
+.message .time {
+    display: block;
+    font-size: 0.75em;
+    color: #1e3d29; /* тот же темно-зеленый */
+    margin-top: 5px;
+}
