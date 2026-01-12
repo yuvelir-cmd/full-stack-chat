@@ -5,7 +5,7 @@ const usernameInput = document.getElementById("username");
 const messagesDiv = document.querySelector(".messages");
 
 // === Адрес сервера ===
-const API_URL = "http://127.0.0.1:8000/messages"; // заменишь на публичный URL, когда будет ngrok/deploy
+const API_URL = "https://full-stack-chat-bpw7.onrender.com/"; // заменишь на публичный URL, когда будет ngrok/deploy
 
 // === Функция для загрузки всех сообщений ===
 async function loadMessages() {
